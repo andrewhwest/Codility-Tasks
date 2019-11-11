@@ -1,5 +1,5 @@
 def rotate_K_times(A, K):
-    """shift each element in a list of numbers A, K positions to the right"""
+    """Shift each element in a list of numbers A, K positions to the right"""
     
     INDEX_INCREASE = K % len(A)                  
     SLICE_INDEX = len(A) - INDEX_INCREASE
@@ -7,5 +7,4 @@ def rotate_K_times(A, K):
     
     return A[SLICE_INDEX:] + A[:SLICE_INDEX]        
 
-tester = [x for x in range(1000)]
-rotate_K_times([3,8,9,7,6], 3)
+

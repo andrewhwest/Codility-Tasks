@@ -5,11 +5,11 @@ def rotate(A):
     rotated_A = [last] + A_except_last
     return rotated_A
 
-def rotate_k_times(A, K):
+def rotate_K_times(A, K):
     """Shifts each element in a list K positions to the right"""
 
     #Apply rotate(A) K times
-    for _ in range(k):
+    for _ in range(K):
         B = rotate(A)
         A = B
     return A
