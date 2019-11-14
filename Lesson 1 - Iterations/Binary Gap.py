@@ -1,9 +1,9 @@
-def longest_binary_gap(n):
+def longest_binary_gap(N):
     """Returns the largest number of 0s between two 1s in the binary representation of n"""
     
-    n_binary = bin(n)[2:]     #[2:] removes '0b'   
+    N_binary = bin(N)[2:]     #[2:] removes '0b'   
     
-    one_indexes = [index for (index, value) in enumerate(n_binary) if value == "1"]
+    one_indexes = [index for (index, value) in enumerate(N_binary) if value == "1"]
     
     if len(one_indexes) == 1:    
         return 0                 
