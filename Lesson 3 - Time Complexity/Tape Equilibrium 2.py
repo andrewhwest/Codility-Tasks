@@ -1,5 +1,7 @@
 def minimum_difference(A):
-    """Returns the minimum difference when splitting A into two parts"""
+    """Returns the minimum of 
+       |(A[0] + A[1] + ... + A[P-1]) - (A[P] + A[P+1] + ... + A[len(A)-1]) | 
+       for P in [1, len(A)-1] """
     
     #start with P == 1
     signed_difference = A[0] - sum(A[1:])
