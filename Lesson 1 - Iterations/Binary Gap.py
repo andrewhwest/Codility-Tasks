@@ -11,7 +11,7 @@ def longest_binary_gap(N):
     
     longest_gap = max((index - adjacent - 1) for index, adjacent in zip(one_indexes[1:], one_indexes))
     #each gap is given by one_indexes[i] - one_indexes[i-1] - 1 
-    #works when n_binary has no zeros, eg "1111"
+    #works when N_binary has no zeros, eg "1111"
     
     return longest_gap
     
