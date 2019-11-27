@@ -2,6 +2,7 @@ def value_occurences(A):
     """Creates a dictionary of the form {value in A : number of occurences}"""
 
     value_occurences = {}
+    
     for value in A:
         value_occurences[value] = value_occurences.get(value, 0) + 1
     

@@ -6,6 +6,5 @@ def permutation_check(A):
     
     if A_has_correct_elements:
         return 1
-    
     else:
         return 0
