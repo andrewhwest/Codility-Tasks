@@ -4,4 +4,8 @@ def permutation_check(A):
     B = set(list(range(1, len(A)+1)))
     A_has_correct_elements = (set(A) == set(B))
     
-    return int(A_has_correct_elements)
+    if A_has_correct_elements:
+        return 1
+    
+    else:
+        return 0

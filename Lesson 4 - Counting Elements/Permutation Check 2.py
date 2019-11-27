@@ -1,4 +1,4 @@
-def permutation_check(A):
+def permutation_check_version2(A):
     """Returns 1 if A only contains every integer in [1, len(A)], 0 if not"""
     
     A.sort()

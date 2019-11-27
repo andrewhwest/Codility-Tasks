@@ -6,21 +6,21 @@ def final_counter_values(N, A):
     """Returns the final value of the N counters
        after using counter operations determined by A"""
     
-    #initialise counters
+    # Initialise counters
     counters = [0] * N
     
     for value in A:
         try:
             
-            #increase(X) operation
+            # Increase(X) operation
             if 1 <= value <= N:
                 counters[value-1] += 1
                 
-            #max counter operaton
+            # Max counter operaton
             elif value == (N+1):
                 counters = [max(counters)] * N
                 
-            #value not in [1,N+1]
+            # Value not in [1,N+1]
             else:
                 raise Counter_error
                 
