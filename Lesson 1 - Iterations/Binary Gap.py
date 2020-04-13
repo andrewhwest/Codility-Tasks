@@ -1,17 +1,19 @@
+def one_indices(binary_number):
+    """Returns a list of the indices where there are 1s in a binary number"""
+    
+    return [index for (index, value) in enumerate(binary_number) if value == "1"]
+
 def longest_binary_gap(N):
-    """Returns the largest number of 0s between two 1s in the binary representation of n"""
+    """Returns the largest number of 0s closed inbetween two 1s in the binary representation of N"""
     
-    N_binary = bin(N)[2:]     #[2:] removes '0b'   
+    N_binary = bin(N).split('b')[1]  
     
-    one_indexes = [index for (index, value) in enumerate(N_binary) if value == "1"]
-    
-    if len(one_indexes) == 1:    
+    # Need at least two 1s for gaps
+    if len(one_indices(N_binary)) == 1:    
         return 0                 
-    # Need at least two 1s for gaps 
-    
-    longest_gap = max((index - adjacent - 1) for index, adjacent in zip(one_indexes[1:], one_indexes))
-    # Each gap is given by one_indexes[i] - one_indexes[i-1] - 1 
-    # Works when N_binary has no zeros, eg "1111"
-    
-    return longest_gap
-    
+    else: 
+        longest_gap = max( (index - adjacent - 1) for index, adjacent 
+                                                  in zip(one_indices(N_binary)[1:], 
+                                                         one_indices(N_binary))
+                         ) 
+        return longest_gap
